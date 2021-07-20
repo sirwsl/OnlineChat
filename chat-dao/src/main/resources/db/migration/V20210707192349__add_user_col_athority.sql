@@ -1,0 +1,1 @@
+ALTER TABLE `t_user` ADD `authority` VARCHAR(32) COMMENT '权限';

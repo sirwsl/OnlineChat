@@ -1,0 +1,1 @@
+alter table t_loggers  CHANGE creat_time  `create_time` datetime;

@@ -1,0 +1,1 @@
+alter table t_friends rename to t_friend_room;

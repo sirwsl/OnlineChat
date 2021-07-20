@@ -1,0 +1,1 @@
+alter table `t_chat_room` modify column `notice` text(2000) DEFAULT NULL

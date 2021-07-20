@@ -1,0 +1,1 @@
+ALTER TABLE `t_chat_room` DROP COLUMN users

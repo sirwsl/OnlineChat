@@ -1,0 +1,37 @@
+
+# 阿里云存储参数配置
+ali:
+  oss:
+    endpoint: #阿里云OSS的节点 oss-cn-shenzhen.aliyuncs.com
+    accessKeyId: #关键key
+    accessKeySecret: #密钥
+    bucketName: #bucket名称
+    url: #访问URL
+    aliUrl: #bucket的地址
+    getFileUrl: #
+    myHostUrl: #访问静态资源域名
+
+#SMS榛子云参数配置
+zzy:
+  apiUrl: https://sms_developer.zhenzikj.com
+  appSecret: #授权码
+  appId: #ID
+
+jwt:
+  redisToken: 4800
+  expire: 3600
+  newToken: 600
+  keys: wslhome-shoppingkill-sirwsl
+
+verify:
+  imgCodeTimeOut: 300
+  phoneCodeTimeOut: 300
+
+req:
+  doMainUrl: localhost
+
+url:
+  image: http://static.wslhome.top/ #图片资源域名
+  webPage: http://test.wslhome.top/ #后端访问域名
+  server: http://kill.wslhome.top/ #前端域名
+

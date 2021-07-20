@@ -1,0 +1,1 @@
+ALTER TABLE `t_room` ADD user_ids text(2000) COMMENT '用户ids';

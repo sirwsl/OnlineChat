@@ -1,0 +1,1 @@
+alter table t_user  CHANGE passward  `password` VARCHAR(64);

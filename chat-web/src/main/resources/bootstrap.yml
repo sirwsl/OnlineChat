@@ -1,0 +1,69 @@
+spring:
+  application:
+    name: OnlineChat
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      #是否启用consul
+      enabled: true
+      discovery:
+        # 启用服务发现
+        enabled: true
+        # 启用服务注册
+        register: true
+        # 服务停止时取消注册
+        deregister: true
+        # 表示注册时使用IP而不是hostname
+        prefer-ip-address: true
+        # 执行监控检查的频率
+        health-check-interval: 30s
+        # 设置健康检查失败多长时间后，取消注册
+        health-check-critical-timeout: 30s
+        # 开启心跳检测
+        heartbeat:
+          enabled: true
+        # 健康检查的路径
+        health-check-path: /test
+        # 服务注册标识，格式为：应用名称+服务器IP+端口
+        instance-id: ${spring.application.name}:${spring.cloud.client.ipaddress}:${server.port}
+        config:
+          # 启用consul的配置中心功能，默认是true
+          enabled: true
+          # 表示consul上面文件的格式 有四种 YAML PROPERTIES KEY-VALUE FILES，默认是KEY-VALUE
+          format: YAML
+          #配置基本文件，默认值config
+          prefix: ${spring.application.name}
+          #表示开发环境：dev/test/prepped，生产环境独立部署consul服务器
+          default-context: dev
+          #表示consul上面的配置文件名，每个开发人员各自管理自己的配置文件
+          data-key: infokey
+          # watch选项为配置监视功能，主要监视配置的改变
+          watch:
+            enabled: true
+            delay: 10000
+            wait-time: 30
+
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  shareSecurityContext: true
+  command:
+    default:
+      circuitBreaker:
+        requestVolumeThreshold: 1
+        sleepWindowInMilliseconds: 15000
+        forceOpen: false
+        forceClosed: false
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+
+ribbon:
+  ConnectTimeout: 4000
+  ReadTimeout: 4000

@@ -1,0 +1,5 @@
+ALTER TABLE `t_user` ADD qq VARCHAR(15) COMMENT 'QQ';
+ALTER TABLE `t_user` ADD wx VARCHAR(32) COMMENT '微信';
+ALTER TABLE `t_user` ADD email VARCHAR(32) COMMENT '邮箱';
+ALTER TABLE `t_user` ADD phone VARCHAR(15) COMMENT '手机';
+ALTER TABLE `t_user` ADD sex bit(1) COMMENT '性别';
