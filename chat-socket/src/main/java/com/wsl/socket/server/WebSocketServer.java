@@ -60,7 +60,7 @@ public class WebSocketServer {
                     e.printStackTrace();
                 }
             });
-            redisTemplate.boundValueOps(RedisEnum.NUM_NOW).increment();// 在线数加1
+            redisTemplate.boundValueOps(RedisEnum.NUM_NOW).increment(1);// 在线数加1
         }
 
     }
@@ -71,7 +71,7 @@ public class WebSocketServer {
     @OnClose
     public void onClose(@PathParam("userId") String userId) {
         try {
-            redisTemplate.boundValueOps(RedisEnum.NUM_NOW).decrement();
+            redisTemplate.boundValueOps(RedisEnum.NUM_NOW).decrement(1);
         }catch (Exception e){
             log.warn("在线人数递减失败");
         }
