@@ -81,6 +81,7 @@ public class MsgSocketServer{
                     sendMessage(session1,JSONObject.toJSONString(msgParam.getData()));
                 }else {
                     //如果是群聊转发到对应群聊
+                    msgParam.getData().setFormId(msgParam.getData().getToId());
                     List<String> userIdForChat = friendsRoomService.getUserIdForChat(msgParam.getData().getToId());
                     userIdForChat.remove(userId);
                     if (CollectionUtils.isNotEmpty(userIdForChat)){
