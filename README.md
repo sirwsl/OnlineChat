@@ -52,9 +52,26 @@
 
 ### 三、项目运行与部署
 
+
 ### **项目运行**
 
 #### 1、后端
+
+### 运行之前请移除所有子模块pom文件中的以下部分，否则会报错
+```xml
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+```
+
 
 **1）拉取项目**：https://gitee.com/sirwsl/OnlineChat.git or https://github.com/sirwsl/OnlineChat.git
 
@@ -118,6 +135,21 @@ npm start
 
 
  ### 项目构建
+
+### 构建jar包之前请再所有子模块pom文件中添加以下部分，否则会报错
+```xml
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+```
 
 1、后端项目构建参照chat-web模块下dockerfile文件
 
