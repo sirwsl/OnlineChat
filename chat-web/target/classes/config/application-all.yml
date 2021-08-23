@@ -3,7 +3,7 @@
 #  mail:
 #    host: smtp.163.com
 #    username: shoppingkill@163.com
-#    password: ATATHDCCTFQGRONE
+#    password: AT
 #    port: 25
 #    default-encoding: utf-8
 #    protocol: smtp
@@ -12,8 +12,8 @@
 ali:
   oss:
     endpoint: oss-cn-shenzhen.aliyuncs.com
-    accessKeyId: LTAI4GJGi47WfwDsYhWwm4N5
-    accessKeySecret: 0hHVEwE2FewGpsAUwqAFFfJFulsYA6
+    accessKeyId: LTAwerqI4GJGi4df7WfwDsYhsaSASWwm4N5
+    accessKeySecret: 0hHVEwdsaE2FewGpsAUwFsaqAFFSASFfsdaJsadasdasdasdasdasdasdasdaFulsYA6
     bucketName: shoppingkill
     url: //shopingkill.oss-cn-shenzhen.aliyuncs.com/
     aliUrl: http://shopingkill.oss-cn-shenzhen.aliyuncs.com/
@@ -23,7 +23,7 @@ ali:
 #SMS榛子云参数配置
 zzy:
   apiUrl: https://sms_developer.zhenzikj.com
-  appSecret: NTNlN2M0ODItN2Q5OS00MmU4LTg1Y2EtZmM5NDMyZDMzMzZh
+  appSecret: NTNlN2M0ODZh
   appId: 105924
 
 jwt:
